@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"The message was ${et_input.text}",Toast.LENGTH_LONG).show()
         }
 
-        // Intent - redirecting the user to another screen
+        // 1. Intent - redirecting the user to another screen
         val btnResult:Button = findViewById(R.id.btnGoToNextScreen)
 
         btnResult.setOnClickListener(){
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Intent - redirect the user to another app e.g. the web browser to visit a web page
+        // 2. Intent - redirect the user to another app e.g. the web browser to visit a web page
         val btnCNN: Button = findViewById(R.id.btnCNN)
 
         btnCNN.setOnClickListener(){
