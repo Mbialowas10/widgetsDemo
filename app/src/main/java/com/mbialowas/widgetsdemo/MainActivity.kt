@@ -1,5 +1,6 @@
 package com.mbialowas.widgetsdemo
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,17 +23,33 @@ class MainActivity : AppCompatActivity() {
 
 
         val et_input : EditText = findViewById(R.id.et_input)
+        var input:String? = null
 
-        // get input from edit Text
-        val input = et_input.text
 
         // register button
         val btn : Button = findViewById(R.id.btnInput)
         btn.setOnClickListener(){
+            // get input from edit Text
+            input = et_input.text.toString()
+
             //Toast.makeText(this,"Hello class, the button was click",Toast.LENGTH_LONG).show()
             //pass the value here
             Toast.makeText(this,"The message was ${et_input.text}",Toast.LENGTH_LONG).show()
         }
+
+        val btnResult:Button = findViewById(R.id.btnGoToNextScreen)
+
+        btnResult.setOnClickListener(){
+            // intent - goto Next screen
+            var intent:Intent = Intent(this,ResultActivity::class.java)
+            //startActivity(intent)
+
+            // what about passing parameters(data) to second screen
+            intent.putExtra("name",input)
+            startActivity(intent)
+        }
+
+
 
     }
 }
