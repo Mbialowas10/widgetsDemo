@@ -2,6 +2,7 @@ package com.mbialowas.widgetsdemo
 
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"The message was ${et_input.text}",Toast.LENGTH_LONG).show()
         }
 
+        // Intent - redirecting the user to another screen
         val btnResult:Button = findViewById(R.id.btnGoToNextScreen)
 
         btnResult.setOnClickListener(){
@@ -49,6 +51,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Intent - redirect the user to another app e.g. the web browser to visit a web page
+        val btnCNN: Button = findViewById(R.id.btnCNN)
+
+        btnCNN.setOnClickListener(){
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://cnn.com"))
+            startActivity(intent)
+        }
 
 
     }

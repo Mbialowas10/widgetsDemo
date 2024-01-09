@@ -24,7 +24,7 @@
         android:id="@+id/et_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
+        android:layout_marginEnd="87dp"
         android:layout_marginBottom="152dp"
         android:ems="10"
         android:hint="Enter a name"
@@ -38,21 +38,32 @@
         android:id="@+id/btnInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="81dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="12dp"
         android:text="Submit"
-        app:layout_constraintBottom_toTopOf="@+id/btnGoToNextScreen"
-        app:layout_constraintEnd_toEndOf="@+id/btnGoToNextScreen"
+        app:layout_constraintBottom_toTopOf="@+id/btnCNN"
+        app:layout_constraintEnd_toEndOf="@+id/btnCNN"
         app:layout_constraintTop_toBottomOf="@+id/et_input" />
 
     <Button
         android:id="@+id/btnGoToNextScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="110dp"
+        android:layout_marginEnd="109dp"
         android:layout_marginBottom="101dp"
         android:text="Goto Next Screen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCNN" />
+
+    <Button
+        android:id="@+id/btnCNN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:background="#9E0909"
+        android:text="Goto CNN news"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToNextScreen"
+        app:layout_constraintStart_toStartOf="@+id/btnGoToNextScreen"
         app:layout_constraintTop_toBottomOf="@+id/btnInput" />
 </androidx.constraintlayout.widget.ConstraintLayout>
