@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         // or setText
         tv_input.setText("Cheers")
 
-
+        // register xml control with code
         val et_input : EditText = findViewById(R.id.et_input)
 
         // get input from edit Text
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener(){
             //Toast.makeText(this,"Hello class, the button was click",Toast.LENGTH_LONG).show()
             //pass the value here
-            Toast.makeText(this,"The message was ${et_input.text}",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"The message was ${input}",Toast.LENGTH_LONG).show()
         }
 
     }
